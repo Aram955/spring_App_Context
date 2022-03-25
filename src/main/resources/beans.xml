@@ -8,41 +8,5 @@
 
     <context:component-scan base-package="am.training"/>
 
-    <bean name="raceService" class="am.training.service.RaceServiceImp">
-        <property name="horseService" ref="horseService" />
-    </bean>
-
-    <bean name="horseService" class="am.training.service.HorseServiceImp">
-        <constructor-arg name="horses" ref="horses"/>
-
-    </bean>
-
-    <util:list id="horses" value-type="am.training.beans.Horse">
-        <ref bean="hors1"></ref>
-        <ref bean="hors2"></ref>
-        <ref bean="hors3"></ref>
-        <ref bean="hors4"></ref>
-    </util:list>
-
-    <bean name="hors1" class="am.training.beans.Horse">
-        <constructor-arg name="bread" value="arabakan"/>
-        <constructor-arg name="raceNumber" value="1"/>
-        <constructor-arg name="rider" value="Ahmed"/>
-    </bean>
-    <bean name="hors2" class="am.training.beans.Horse">
-        <constructor-arg name="bread" value="poni"/>
-        <constructor-arg name="raceNumber" value="2"/>
-        <constructor-arg name="rider" value="Boni"/>
-    </bean>
-    <bean name="hors3" class="am.training.beans.Horse">
-        <constructor-arg name="bread" value="bread3"/>
-        <constructor-arg name="raceNumber" value="3"/>
-        <constructor-arg name="rider" value="rider3"/>
-    </bean>
-    <bean name="hors4" class="am.training.beans.Horse">
-        <constructor-arg name="bread" value="bread4"/>
-        <constructor-arg name="raceNumber" value="4"/>
-        <constructor-arg name="rider" value="rider4"/>
-    </bean>
 
 </beans>
